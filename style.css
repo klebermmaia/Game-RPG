@@ -1,0 +1,9 @@
+@import url(modules/css/tipografia.css);
+@import url(modules/css/normalize.css);
+@import url(modules/css/reset.css);
+@import url(modules/css/creationCharacter.css);
+
+/* Global */
+.none{
+  display: none;
+}

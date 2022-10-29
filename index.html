@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="---AQUI A DESCRIÇÃO DO SITE---">
+    <link rel="stylesheet" href="style.css">
+    <title>RPG</title>
+  </head>
+  <body>
+
+    <section class="cutscene">
+      <h1 class="title-cutscene">RPG</h1>
+      <div class="init-game">
+        <button id="newGame">New Game</button>
+        <button id="continue">Continue</button>
+      </div>
+    </section>
+
+    <section class="creation-character">
+      <div class="creation" data-creation="box">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name">
+
+        <label for="race">Raça</label>
+        <select name="race" id="race" data-raca="primaria">
+          <option value="dwarf">Anão</option>
+          <option value="elf">Elfo</option>
+          <option value="halfling">Halfling</option>
+          <option value="human">Humano</option>
+          <option value="draconate">Draconato</option>
+          <option value="gnome">Gnomo</option>
+          <option value="half-elf">Meio-Elfo</option>
+          <option value="half-orc">Meio-Orc</option>
+          <option value="tiefling">Tiefling</option>
+        </select>
+        <div class="box-sub-racas none" data-raca="secundaria">
+          <label for="subRaces">Sub-raças</label>
+          <select name="subRaces" id="subRaces" data-raca-select="sub-raca"></select>
+        </div>
+
+        <label for="class">Classe</label>
+        <select name="class" id="class">
+        <option value="Barbarian">Bárbaro</option>
+        <option value="Bard">Bardo</option>
+        <option value="Wizard">Bruxo</option>
+        <option value="Cleric">Clérigo</option>
+        <option value="Druid">Druida</option>
+        <option value="Sorcerer">Feiticeiro</option>
+        <option value="Warrior">Guerreiro</option>
+        <option value="rogue">Ladino</option>
+        <option value="Mage">Mago</option>
+        <option value="Monk">Monge</option>
+        <option value="Paladin">Paladino</option>
+        <option value="Patrolman">Patrulheiro</option>
+        </select>
+
+        <label for="background">Antecedente</label>
+        <select name="background" id="background">
+          <option value="ACOLYTE">Acólito</option>
+          <option value="GUILD CRAFTSMAN">Artesan da guilda</option>
+          <option value="ARTIST">Artista</option>
+          <option value="CHARLATAN">Charlatão</option>
+          <option value="CRIMINAL">Criminoso</option>
+          <option value="HERMIT">Eremita</option>
+          <option value="stranger">Forasteiro</option>
+          <option value="PEOPLE'S HERO">Herói do povo</option>
+          <option value="SAILOR">Marinheiro</option>
+          <option value="NOBLE">Nobre</option>
+          <option value="ORPHAN">Órfão</option>
+          <option value="WISE">Sábio</option>
+          <option value="SOLDIER">Soldado</option>
+        </select>
+
+        <div class="attributes">
+          <h2>Atributos</h2>
+          <label for="for">Força</label>
+          <input type="number" name="attributes" id="for">
+
+          <label for="dex">Destreza</label>
+          <input type="number" name="attributes" id="dex">
+
+          <label for="con">Constituição</label>
+          <input type="number" name="attributes" id="con">
+
+          <label for="int">Inteligência</label>
+          <input type="number" name="attributes" id="int">
+
+          <label for="wis">Sabedoria</label>
+          <input type="number" name="attributes" id="wis">
+
+          <label for="car">Carisma</label>
+          <input type="number" name="attributes" id="car">
+
+        </div>
+
+        <button>Criar</button>
+
+      </div>
+    </section>
+
+    <section class="game-box">
+
+    </section>
+    <section class="character-box">
+
+    </section>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: bloodcrow;
+  src: url(../../media/fonts/bloodcrow.ttf);
+}
+.title-cutscene{
+  font-family: 'bloodcrow';
+  font-size: 8rem;
+  text-align: center;
+  text-shadow: 4px 4px 6px #00000080;
+}
