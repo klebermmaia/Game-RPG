@@ -27,7 +27,8 @@ export default function exportRace(race) {
       comum: true,
       anao: true,
     },
-    subRacas: {
+    subRacas: true,
+    listaSubRacas: {
       colina: {
         nome: 'Anão da colina',
         atributos: {
@@ -71,8 +72,10 @@ export default function exportRace(race) {
       comum: true,
       elfico: true,
     },
-    subRacas: {
+    subRacas: true,
+    listaSubRacas: {
       alto: {
+        nome: 'Alto Elfo',
         atributos: {
           int: 1,
         },
@@ -89,8 +92,8 @@ export default function exportRace(race) {
           }
         },
         magias: {
-          definidas:false,
-          indefinidas:{
+          definidas: false,
+          indefinidas: {
             quantidade: 1,
             nivel: 0,
             lista: 'mago',
@@ -100,6 +103,7 @@ export default function exportRace(race) {
         idiomas: 'Você pode falar, ler e escrever um idioma adicional à sua escolha.',
       },
       floresta: {
+        nome: 'Elfo da Floresta',
         atributos: {
           wis: 1,
         },
@@ -119,6 +123,7 @@ export default function exportRace(race) {
         MascaraDaNatureza: 'Você pode tentar se esconder mesmo quando você está apenas levemente obscurecido por folhagem, chuva forte, neve caindo, névoa ou outro fenômeno natural.',
       },
       negro: {
+        nome: 'Elfo Negro',
         atributos: {
           car: 1,
         },
@@ -139,13 +144,13 @@ export default function exportRace(race) {
           }
         },
         magias: {
-          definidas:{
-            magia1:{
+          definidas: {
+            magia1: {
               nome: 'Globo de luz',
               nivelDisponivel: 3,
               habilidadeConjuracao: 'car',
             },
-            magia2:{
+            magia2: {
               nome: 'Escuridão',
               nivelDisponivel: 5,
               habilidadeConjuracao: 'car',
@@ -175,8 +180,10 @@ export default function exportRace(race) {
       comum: true,
       halfling: true,
     },
-    subRacas: {
+    subRacas: true,
+    listaSubRacas: {
       pesLeve: {
+        nome: 'Pés Leves',
         atributos: {
           car: 1,
         },
@@ -185,6 +192,7 @@ export default function exportRace(race) {
         }
       },
       robusto: {
+        nome: 'Robusto',
         atributos: {
           con: 1,
         },
@@ -192,8 +200,174 @@ export default function exportRace(race) {
           resiliencia: 'Você tem vantagem em testes de resistência contra veneno e tem resistência contra dano de veneno',
         },
       },
-    },
+    }
   }
+  const human = {
+    atributos: {
+      for: 1,
+      dex: 1,
+      con: 1,
+      int: 1,
+      wis: 1,
+      car: 1,
+    },
+    deslocamente: 9,
+    idiomas: {
+      comum: true,
+      outros: true,
+    },
+    subRacas: false,
+    listaSubRacas: '',
+  }
+  const gnomo = {
+    atributos: {
+      int: 2,
+    },
+    deslocamente: 7.5,
+    vantagens: {
+      visaoNoEscuro: 18,
+      espertezaGnomica: 'Você possui vantagem em todos os testes de resistência de Inteligência, Sabedoria e Carisma contra magia',
+    },
+    proficienciasRaca: {
+      pericias: {
+        percepcao: true,
+      },
+    },
+    idiomas: {
+      comum: true,
+      gnomico: true,
+    },
+    subRacas: true,
+    listaSubRacas: {
+      floresta: {
+        nome: ' Gnomo da Floresta',
+        atributos: {
+          dex: 1,
+        },
+        vantagens: {
+          furtividadeNatural: 'Você pode tentar se esconder mesmo quando possuir apenas a cobertura de uma criatura que for no mínimo um tamanho maior que o seu.'
+        },
+        magias: {
+          definidas: {
+            magia1: {
+              nome: 'Ilusão menor',
+              nivel: 0,
+              habilidadeConjuracao: 'int',
+            },
+          },
+          indefinidas: false,
+        },
+        FalarComBestas: 'Através de sons e gestos, você pode comunicar ideias simples para Bestas pequenas ou menores. Gnomos da floresta amam os animais e normalmente possuem esquilos, doninhas, coelhos, toupeiras, pica-paus e outras criaturas como amados animais de estimação.',
+      },
+      Rochas: {
+        nome: 'gnomo das rochas',
+        atributos: {
+          con: 1,
+        },
+        vantagens: {
+          conhecimentoDeArtifice: 'Toda vez que você fizer um teste de Inteligência (História) relacionado a itens mágicos, objetos alquímicos ou mecanismos tecnológicos, você pode adicionar o dobro do seu bônus de proficiência, ao invés de qualquer bônus de proficiência que você normalmente use.',
+        },
+      },
+    }
+  }
+  const halfElf = {
+    atributos: {
+      car: 2,
+      outros: 'Mais dois atributos a escolha aumentam em 1',
+    },
+    deslocamente: 7.5,
+    vantagens: {
+      visaoNoEscuro: 18,
+      ancestralFeerico: 'Você tem vantagem nos testes de resistência para resistir a ser enfeitiçado e magias não podem colocá-lo para dormir.',
+      VersatilidadeEmPericia: 'Você ganha proficiência em duas perícias, à sua escolha.',
+    },
+    idiomas: {
+      comum: true,
+      elfico: true,
+      outros: 'mais um idioma a escolha'
+    },
+    subRacas: true,
+    listaSubRacas: {
+      floresta: {
+        nome: ' Gnomo da Floresta',
+        atributos: {
+          dex: 1,
+        },
+        vantagens: {
+          furtividadeNatural: 'Você pode tentar se esconder mesmo quando possuir apenas a cobertura de uma criatura que for no mínimo um tamanho maior que o seu.'
+        },
+        magias: {
+          definidas: {
+            magia1: {
+              nome: 'Ilusão menor',
+              nivel: 0,
+              habilidadeConjuracao: 'int',
+            },
+          },
+          indefinidas: false,
+        },
+        FalarComBestas: 'Através de sons e gestos, você pode comunicar ideias simples para Bestas pequenas ou menores. Gnomos da floresta amam os animais e normalmente possuem esquilos, doninhas, coelhos, toupeiras, pica-paus e outras criaturas como amados animais de estimação.',
+      },
+      Rochas: {
+        nome: 'gnomo das rochas',
+        atributos: {
+          con: 1,
+        },
+        vantagens: {
+          conhecimentoDeArtifice: 'Toda vez que você fizer um teste de Inteligência (História) relacionado a itens mágicos, objetos alquímicos ou mecanismos tecnológicos, você pode adicionar o dobro do seu bônus de proficiência, ao invés de qualquer bônus de proficiência que você normalmente use.',
+        },
+      },
+    }
+  }
+  const halfOrc = {
+    atributos: {
+      for: 2,
+      con: 1,
+    },
+    deslocamente: 7.5,
+    vantagens: {
+      visaoNoEscuro: 18,
+      Ameacador: 'Você adquire proficiência na perícia Intimidação.'
+    },
+    idiomas: {
+      comum: true,
+      elfico: true,
+      outros: 'mais um idioma a escolha'
+    },
+    subRacas: true,
+    listaSubRacas: {
+      floresta: {
+        nome: ' Gnomo da Floresta',
+        atributos: {
+          dex: 1,
+        },
+        vantagens: {
+          furtividadeNatural: 'Você pode tentar se esconder mesmo quando possuir apenas a cobertura de uma criatura que for no mínimo um tamanho maior que o seu.'
+        },
+        magias: {
+          definidas: {
+            magia1: {
+              nome: 'Ilusão menor',
+              nivel: 0,
+              habilidadeConjuracao: 'int',
+            },
+          },
+          indefinidas: false,
+        },
+        FalarComBestas: 'Através de sons e gestos, você pode comunicar ideias simples para Bestas pequenas ou menores. Gnomos da floresta amam os animais e normalmente possuem esquilos, doninhas, coelhos, toupeiras, pica-paus e outras criaturas como amados animais de estimação.',
+      },
+      Rochas: {
+        nome: 'gnomo das rochas',
+        atributos: {
+          con: 1,
+        },
+        vantagens: {
+          conhecimentoDeArtifice: 'Toda vez que você fizer um teste de Inteligência (História) relacionado a itens mágicos, objetos alquímicos ou mecanismos tecnológicos, você pode adicionar o dobro do seu bônus de proficiência, ao invés de qualquer bônus de proficiência que você normalmente use.',
+        },
+      },
+    }
+  }
+
   switch (race) {
     case 'dwarf':
       return dwarf;
@@ -203,6 +377,18 @@ export default function exportRace(race) {
       break;
     case 'halfling':
       return halfling;
+      break;
+    case 'human':
+      return human;
+      break;
+    case 'gnomo':
+      return gnomo;
+      break;
+    case 'halfElf':
+      return halfElf;
+      break;
+    case 'halfOrc':
+      return halfOrc;
       break;
   }
 }

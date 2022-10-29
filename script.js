@@ -14,30 +14,28 @@ class CreateSheet{
     const selectSubRaca = document.querySelector('[data-raca-select="sub-raca"]');
     this.character.race = value;
     const infoRaca = exportRace(value);
-    if(infoRaca.subRacas){
+
+    if(infoRaca.subRacas == true){
       selectSubRaca.innerHTML = ''; // Limpa o HTML para não somar mais options no select.
       subRaca.classList.remove('none'); // remove para aparecer opções de sub-raças.
-      const listaSubRacas = Object.keys(infoRaca.subRacas); // Retorna uma array com as Sub-raças.
-      // console.log(infoRaca.subRacas[listaSubRacas[1]])
+
+      const listaSubRacas = Object.keys(infoRaca.listaSubRacas); // Retorna uma array com as Sub-raças.
       for(let c = 0; c < listaSubRacas.length; c++){
         let novoElemento = document.createElement('option'); // Cria novo elemento option para o select.
         selectSubRaca.appendChild(novoElemento);
-        /*
-        =========================================================================
-          PROXIMO PASSO BEM AQUI.
-          * Adicionar para cada option a opção segundo a raça selecionada.
-          * Ultilizar texto do array da linha 20 (listaSubRacas), em cada opção.
-          * Da teu jeito de fazer isso kleber de amanhã, eu to com sono, boa noite 😴
-        =========================================================================
-        */
       }
 
+      const options = selectSubRaca.childNodes
+      options.forEach((item, index)=>{ // Adiciona nome das sub-classes de forma dinâmica. 
+        let nome = infoRaca.listaSubRacas[listaSubRacas[index]].nome
+        item.innerText = nome;
+      });
     } else{
-      console.log('não existe')
+      subRaca.classList.add('none');
     }
   }
-  subRaca(){
-    
+  subRaces(value){
+    this.character.subRace = value;
   }
 }
 const sheet = new CreateSheet(); 

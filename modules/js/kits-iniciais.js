@@ -1,0 +1,1 @@
+// Os pacotes iniciais, tais como o pacote de aventureiro.
